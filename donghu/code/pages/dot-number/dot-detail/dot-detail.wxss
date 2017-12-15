@@ -1,0 +1,349 @@
+@import "../../../utils/wxParse/wxParse.wxss";
+
+page{
+    background-color:  #fff;
+    height: 100%;
+}
+
+scroll-view{
+  height: 100%;
+}
+
+/*头部说明*/
+.containt{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    padding: 50rpx 32rpx;
+    background-color: #fff;
+}
+
+.header .header-title{
+    font-size: 24px;
+}
+
+.header .header-des{
+    margin-top: 37rpx;
+    display: flex;
+    font-size: 15px;
+}
+
+.header .header-des .header-des-bouns{
+    height: 28rpx;
+    padding-left: 30rpx;
+    padding-right: 20rpx;
+    background: url(../../../images/￥.png) no-repeat 0 3rpx;
+    background-size: 23rpx 23rpx;
+    color: #fb5a6d;
+    line-height: 28rpx;
+    border-right: 1rpx solid #888;
+}
+
+.header .header-des .header-des-time{
+    padding-left: 30rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    color: #929292;
+}
+
+.containt .line{
+    height: 20rpx;
+    background-color: #efeff4; 
+}
+
+/*导航*/
+.nav{
+  display: flex;
+  height: 100rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-des,.nav-rule{
+  flex: 1;
+  text-align: center;
+  line-height: 100rpx;
+  color: #363636;
+  font-size: 15px;
+}
+
+.nav .current{
+  border-bottom: 6rpx solid #15aafa;
+  color: #6ec3fc;
+}
+
+/*详细正文*/
+.main{
+    display: none;
+    padding: 40rpx 20rpx 70rpx;
+    margin-bottom: 90rpx;
+    background-color: #fff;
+}
+
+.main image{
+    width: 100%;
+}
+
+.rule{
+    padding: 40rpx 20rpx 70rpx;
+    margin-bottom: 90rpx;
+    background-color: #fff;
+}
+
+.rule view{
+    padding: 0 34rpx;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30rpx;
+    color: #888;
+    line-height: 1.8em;
+}
+
+.rule .strong{
+    font-weight: 700;
+    color: #111;
+}
+
+.block{
+    display: block;
+}
+
+.none{
+    display: none;
+}
+
+/*底部*/
+.bottom-start{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 89rpx;
+    line-height: 89rpx;
+    background-color: #10aeff;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    box-shadow: 0 -1rpx 1px #0499e5;
+}
+
+.bottom-end{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 89rpx;
+    line-height: 89rpx;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #d7d7d7;
+    box-shadow: 0 -1rpx 1px #d7d7d7;
+}
+
+.to-top{
+    position: fixed;
+    right: 0;
+    bottom: 248rpx;
+    width: 70rpx;
+    height: 70rpx;
+    background: url(../../../images/to-top.png) no-repeat center center;
+    background-size: 70rpx 70rpx;
+}
+
+/*评论*/
+.task{
+    width: 100%;
+    background-color: #fff;
+    padding: 0 20rpx;
+    margin-bottom: 90rpx;
+}
+
+.task .task-top{
+    height: 110rpx;
+    padding-top: 40rpx;
+    font-size: 28rpx;
+    color: #000;
+}
+
+.task .task-detail{ 
+    display: flex;
+    height: 215rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.task .task-detail .task-detail-left{
+    display: flex;
+    flex-direction:column;
+    height: 215rpx;
+    width: 104rpx;
+}
+
+.task .task-detail .task-detail-left .icon{
+    width: 70rpx;
+    height: 70rpx;
+    margin-top: 60rpx;
+    overflow: visible;
+    position: relative;
+}
+
+.task .task-detail .task-detail-left .icon image{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+}
+
+.task .task-detail .task-detail-left .icon .sign{
+    position: absolute;
+    color: #fff;
+    font-size: 18rpx;
+    left: 42rpx;
+    top: -27rpx;
+    width: 56rpx;
+    height: 54rpx;
+    line-height: 54rpx;
+    text-align: center;
+    background-position: center;
+    background-size: 56rpx 54rpx;
+}
+
+.task .task-detail .task-detail-left .detail-left-name{
+    font-size: 20rpx;
+    color: #353535;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.task-main .task-detail-right{
+    height: 215rpx;
+    flex: 1;
+    background: rosybrown;
+}
+
+.task-main .task-detail-right .task-detail-right-con{
+    height: 215rpx;
+    position: relative;
+    flex: 1;
+    margin: 0 40rpx;
+    background: red;
+    overflow: visible;
+}
+
+.task-main .task-detail-right .task-detail-right-con .detail-right-bar{
+    width: 100%;
+    height: 5rpx;
+    position: absolute;
+    top:95rpx;
+    left: 0;
+    background: #ccc;
+}
+
+.task-main .task-detail-right .task-detail-right-con .detail-right-bar view{
+    position: absolute;
+    display: inline-block;
+    background: #63e882;
+    height: 5rpx;
+    /*width: 33.333%;*/
+}
+
+.task-main .task-detail-right .task-detail-right-con .step{
+    position: absolute;
+    top:75rpx;
+    width: 45rpx;
+    height: 45rpx;
+    border-radius: 50%;
+    background: #ccc;
+    text-align: center;
+    line-height: 45rpx;
+    margin-left: -22.5rpx;
+    color:#fff;
+    font-size: 20rpx;
+}
+
+.task-main .task-detail-right .task-detail-right-con .desc{
+    position: absolute;
+    top:140rpx;
+    width: 82rpx;
+    text-align: center;
+    margin-left: -40rpx;
+    color:#888;
+    font-size: 20rpx;
+}
+
+.task-main .task-detail-right .task-detail-right-con .step:nth-child(2){
+    left: 0%;
+}
+
+.task-main .task-detail-right .task-detail-right-con .step:nth-child(3){
+    left: 33.333%;
+}
+
+.task-main .task-detail-right .task-detail-right-con .step:nth-child(4){
+    left: 66.666%;
+}
+
+.task-main .task-detail-right .task-detail-right-con .step:nth-child(5){
+    left: 100%;
+}
+
+.task-main .task-detail-right .task-detail-right-con .desc:nth-child(6){
+    left: 0%;
+}
+
+.task-main .task-detail-right .task-detail-right-con .desc:nth-child(7){
+    left: 33.333%;
+}
+
+.task-main .task-detail-right .task-detail-right-con .desc:nth-child(8){
+    left: 66.666%;
+}
+
+.task-main .task-detail-right .task-detail-right-con .desc:nth-child(9){
+    left: 100%;
+}
+
+/*更多*/
+.more{
+    height: 60rpx;
+    text-align: center;
+}
+
+.more button{
+    border: 0;
+}
+
+/*底部*/
+.bottom{
+  height: 130rpx;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 2rpx;
+}
+
+.bottom .bottom-line{
+  position: absolute;
+  height: 2rpx;
+  width: 100%;
+  top: 64rpx;
+  left: 0;
+  background-color: #f4f4f4;
+  z-index: 0;
+}
+
+.bottom .bottom-tip{
+  position: relative;
+  display: inline-block;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  color: #a9a9a9;
+  line-height: 130rpx;
+  background-color: #fff;
+  z-index: 1;
+}

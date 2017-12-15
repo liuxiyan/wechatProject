@@ -1,0 +1,13 @@
+<template name="commentCell">
+  <view class="comment-box1 flex-box">   
+      <image src="{{item.portrait==''?'../../../images/blank-user.png':item.portrait}}"></image>
+  
+      <view class="comment-right flex-col">
+        <view class="comment-info flex-box">
+          <text>{{item.nickname}}</text>
+          <text>{{item.create_date}}</text>
+        </view>
+        <view class="comment-content">{{item.comment}}</view>
+      </view>
+  </view>
+</template>

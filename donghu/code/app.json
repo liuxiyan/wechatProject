@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/interest-creat-data/interest-creat-data",
+    "pages/interest-creat-data/involvement-in/involvement-in",
+    "pages/interest-creat-data/say-detail/say-detail",
+    "pages/interest-creat-data/creat-detail/creat-detail",
+    "pages/interest-creat-data/problem/problem",
+    "pages/dot-number/dot-number",
+    "pages/dot-number/dot-detail/dot-detail",
+    "pages/my/login/login"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#404145",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#9b9ea3",
+    "selectedColor": "#15aafb",
+    "borderStyle": "black",
+    "backgroundColor": "#f7f7fa",
+    "list": [
+      {
+        "pagePath": "pages/interest-creat-data/interest-creat-data",
+        "iconPath": "images/question.png",
+        "selectedIconPath": "images/question-select.png",
+        "text": "趣创数据"
+      },
+      {
+        "pagePath": "pages/dot-number/dot-number",
+        "iconPath": "images/pen.png",
+        "selectedIconPath": "images/pen-select.png",
+        "text": "丹青点数"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-select.png",
+        "text": "我的趣创"
+      }
+    ]
+  }
+}

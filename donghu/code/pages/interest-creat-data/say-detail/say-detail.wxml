@@ -1,0 +1,91 @@
+<import src="../../../utils/wxParse/wxParse.wxml" />
+<scroll-view scroll-y="true" scroll-top="{{scrollTop.scrollNum}}" bindscroll="scrollTopFun" bindscrolltolower="scrollToBottom" scroll-with-animation="true">
+  <view class="containt">
+    <view class="header">
+      <view class="header-title">
+        【数说新语】{{detail.title}}
+      </view>
+      <view class="header-des">
+        <view class="header-des-bouns">{{detail.money}}</view>
+        <view class="header-des-time">{{detail.add_time}}</view>
+      </view>
+    </view>
+
+    <!--分割线-->
+    <view class="line"></view>
+
+    <!--导航-->
+    <view class="nav">
+      <view class="nav-des {{current}}" catchtap="changeToDes">
+        任务描述
+      </view>
+      <view class="nav-rule {{noCurrent}}" catchtap="changeToRule">
+        任务规则
+      </view>
+    </view>
+
+    <!--详细正文-->
+    <view class="main {{desShow}}">
+      <image src="{{detail.img_path}}"></image>
+      <template is="wxParse" data="{{wxParseData:detailDesc.nodes}}" />
+    </view>
+
+    <!--任务规则-->
+    <view class="rule {{ruleShow}}">
+      <view class="strong"> 一起来选题：</view>
+      <view> 根据活动内容选出你的最佳选项；</view>
+      <view class="strong">惊喜在等待：</view>
+      <view> 答题结束后获得一次抽奖机会；</view>
+      <view class="strong">人品决定钱品：</view>
+      <view> 随机爆出的红包金额不等。</view>
+      <view class="strong">奖励说明：</view>
+      <view> 截止时间前，成功完成选题后的会员将获得一次抽奖机会，奖金随机，每人一次，抽完为止。</view>
+    </view>
+
+    <!--分割线-->
+    <view class="line"></view>
+
+    <!--评论-->
+    <view class="comment">
+      <view class="comment-top">全部观点数({{commentArr.length}})</view>
+      <view class="comment-main" wx:for="{{commentArr}}" wx:for-item="mainComment" wx:key="id">
+        <view class="comment-detail">
+          <image src="{{mainComment.head}}"></image>
+          <view class="comment-detail-right">
+            <view class="right-name">{{mainComment.username}}</view>
+            <view class="right-time">发表于{{mainComment.addtime}}</view>
+            <view class="right-content">{{mainComment.content}}</view>
+            <view class="right-follow">
+              <view data-id="{{mainComment.id}}" data-index="{{index}}" bindtap="support">{{mainComment.praise_count}}</view>
+              <view>{{mainComment.subpllist.length}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="comment-other" wx:for="{{mainComment.subpllist}}" wx:for-item="otherComment" wx:key="id">
+          <view class="comment-other-detail">
+            <view class="other-name">{{otherComment.username}}</view>
+            <view class="other-time">发表于{{otherComment.addtime}}</view>
+            <view class="other-content">{{otherComment.content}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!--加载更多提示-->
+      <view class="more" hidden="{{moreShow}}">
+        <button size="mini" plain="true" loading="true"></button>
+      </view>
+
+      <!--底部提示-->
+      <view class="bottom" hidden="{{bottomShow}}">
+        <view class="bottom-line"></view>
+        <view class="bottom-tip">我是有底线的</view>
+      </view>
+    </view>
+
+    <!--底部-->
+    <view class="{{detail.bottomStyle}}" catchtap="startTask">
+      {{detail.statusText}}
+    </view>
+    <view class="to-top" wx:if="{{scrollTop.goTopShow}}" catchtap="toTop"></view>
+  </view>
+</scroll-view>

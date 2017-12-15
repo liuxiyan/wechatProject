@@ -1,0 +1,37 @@
+<import src="../../templates/num-cell.wxml" />
+<view class="container">
+  <view class="header-top">
+    <view class="header-top-question {{current}}" catchtap="changeToQuestion">
+      量数选题
+    </view>
+    <view class="header-top-new {{noCurrent}}" catchtap="changeToNew">
+      数说新语
+    </view>
+  </view>
+
+  <!--量数选题-->
+  <view class="main-question" hidden="{{numType != 1 ? true : false}}">
+    <block wx:for="{{questionArray}}" wx:key="id">
+      <template is="numCell" data="{{item}}" />
+    </block>
+
+    <!--底部提示-->
+    <view class="bottom" hidden="{{bottomFirstShow}}">
+      <view class="bottom-line"></view>
+      <view class="bottom-tip">我是有底线的</view>
+    </view>
+  </view>
+
+  <!--数说新语-->
+  <view class="say-new" hidden="{{numType == 1 ? true : false}}">
+    <block wx:for="{{sayNewArray}}" wx:key="id">
+      <template is="numCell" data="{{item}}" />
+    </block>
+
+    <!--底部提示-->
+    <view class="bottom" hidden="{{bottomSecondShow}}">
+      <view class="bottom-line"></view>
+      <view class="bottom-tip">我是有底线的</view>
+    </view>
+  </view>
+</view>

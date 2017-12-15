@@ -1,0 +1,60 @@
+<import src="../../utils/wxParse/wxParse.wxml" />
+<import src="../../utils/wetoast/wetoast.wxml" />
+
+<import src="../../templates/hot-cell.wxml"/>
+<import src="../../templates/comment-cell.wxml"/>
+
+<view class="container">
+  <view class="detail-section flex-col" hidden="{{contentData.error=='1'}}">
+    <view class="detail-info">
+      <text class="title2 text-ellipsis">{{contentData.data[0].title}}</text>
+       <view class="box1-info">
+          <text>{{contentData.data[0].name}}</text> 
+          <text>{{contentData.data[0].create_date}}</text>
+        </view>
+    </view>
+
+    <view class="content-box"> 
+      <template is="wxParse" data="{{wxParseData:detailDesc.nodes}}" hidden="{{typeid=='3'}}"/>
+
+      <view wx:for="{{imgsData}}" hidden="{{typeid == '1'}}"  wx:key="id" class="imgs-desc-box">
+        <image src="{{item.url}}"></image>
+        <view class="imgs-tips">{{item.des}}</view>
+      </view>
+
+    </view>
+    
+  </view>
+
+  <!--热门推荐 开始-->
+  <view class="detail-hot flex-col">
+    <view class="detail-title">热门推荐</view>
+
+     <block wx:for="{{singleImg}}"  wx:key="id">
+        <template is="hotCell" data="{{item}}"></template>
+     </block>
+  </view>
+  <!--热门推荐 结束-->
+
+  <!--精彩评论 开始-->
+  <view class="detail-comment flex-col">
+    <view class="detail-title">精彩评论</view>
+    
+    <block wx:for="{{commentData}}"  wx:key="id">
+        <template is="commentCell" data="{{item}}"></template>
+    </block>
+
+    <!--底线-->
+      <view class="bottom" hidden="{{bottomHidden}}">
+        <view class="bottom-line"></view>
+        <view class="bottom-tip">我是有底线的</view>
+      </view>
+
+    <view class="blank-comment" hidden="{{commentData!=''}}">
+      <image src="../../images/blank.png"></image>
+      <view>暂无评论</view>
+    </view>
+  </view>
+
+  <!--精彩评论 结束-->
+</view>

@@ -1,0 +1,10 @@
+@import "../../templates/num-cell.wxss";
+
+page{
+  background-color: #f9f9f9;
+}
+
+.container{
+  width: 100%;
+  padding: 0 32rpx;
+}

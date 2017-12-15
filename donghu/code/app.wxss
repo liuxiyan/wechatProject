@@ -1,0 +1,7 @@
+page{
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+page,view,text,textarea,scroll-view{
+  box-sizing: border-box;
+}

@@ -1,0 +1,6 @@
+<view class="container">
+    <form bindsubmit="bindFormSubmit">
+        <textarea placeholder="请输入200字以内的观点和创意" placeholder-style="font-size:30rpx;color:#a1a1a1;" maxlength="200"  name="textarea" auto-focus />
+        <button form-type="submit">提交</button>
+    </form>
+</view>

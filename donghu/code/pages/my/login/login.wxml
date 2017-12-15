@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="top">
+  </view>
+  <view class="header">
+    <view class="header-top-question {{current}}" catchtap="changeToQuestion">
+      登录
+    </view>
+    <view class="header-top-new {{noCurrent}}" catchtap="changeToNew">
+      注册
+    </view>
+  </view>
+  <view class="main">
+    <view class="main-username">
+      <view>账号：</view>
+      <input placeholder="请输入手机号邮箱" auto-focus/>
+    </view>
+    <view class="main-password">
+      <view>密码：</view>
+      <input placeholder="请输入密码" password='true' />
+    </view>
+  </view>
+</view>

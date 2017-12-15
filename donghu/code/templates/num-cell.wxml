@@ -1,0 +1,19 @@
+<template name="numCell">
+  <view class="cell" bindtap="handleEventTap" data-id="{{item.id}}">
+    <view class="cell-tip" style="background-repeat: no-repeat; background-image: url({{item.imageUrl}});">{{item.statusText}}</view>
+    <image src="{{item.img}}" mode="aspectFit" class="cell-image"></image>
+    <view class="cell-des">
+      <view class="cell-des-title">
+        {{item.title}}
+      </view>
+      <view class="cell-des-bonus">
+        <view>{{item.money}}</view>
+        <view>奖金</view>
+      </view>
+      <view class="cell-des-follow">
+        <view>{{item.browse_count}}</view>
+        <view>{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+</template>

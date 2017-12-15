@@ -1,0 +1,61 @@
+
+<import src="../../templates/hot-cell.wxml"/>
+
+<view class="container">
+  <view class="main-tab flex-box">
+    <block  wx:for="{{navBar}}" wx:key="id">
+      <view class="{{tabStatusArr[index]}}" data-id="{{item.id}}" data-index="{{index+1}}"  bindtap="setTabCondition">{{item.name}}</view>
+    </block>     
+  </view>
+
+  <!--推荐内容 开始-->
+   <view class="flex-col"  hidden="{{numType != 1 ? true : false}}">
+      <!--内容加载 开始-->   
+      <block wx:for="{{singleImg1}}" wx:key="id">
+        <template is="hotCell" data="{{item}}"></template>       
+      </block>
+      <!--内容加载 结束-->
+   </view>
+   <!--推荐内容 结束-->
+
+   <!--游记内容 开始-->
+   <view class="" hidden="{{numType != 2 ? true : false}}">
+     <!--内容加载 开始-->
+      <block wx:for="{{singleImg2}}" wx:key="id">
+        <template is="hotCell" data="{{item}}"></template>
+      </block>
+      <!--内容加载 结束-->    
+   </view>
+   <!--游记内容 结束-->
+
+   <!--改造内容 开始-->
+   <view class="" hidden="{{numType != 3 ? true : false}}">
+   <!--内容加载 开始-->
+      <block wx:for="{{singleImg3}}" wx:key="id">
+        <template is="hotCell" data="{{item}}"></template>
+      </block>
+      <!--内容加载 结束-->      
+   </view>
+   <!--改造内容 结束-->
+
+   <!--设计内容 开始-->
+   <view class="" hidden="{{numType != 4 ? true : false}}">
+   <!--内容加载 开始-->
+      <block wx:for="{{singleImg4}}" wx:key="id">
+        <template is="hotCell" data="{{item}}"></template>
+      </block>
+      <!--内容加载 结束-->  
+   </view>
+   <!--设计内容 结束-->
+
+   <!--美食内容 开始-->
+   <view class="" hidden="{{numType != 5 ? true : false}}">
+   <!--内容加载 开始-->
+      <block wx:for="{{singleImg5}}" wx:key="id">
+        <template is="hotCell" data="{{item}}"></template>
+      </block>
+   <!--内容加载 结束-->      
+   </view>
+   <!--美食内容 结束-->
+
+</view>

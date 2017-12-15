@@ -1,0 +1,31 @@
+<template name="hotCell">
+  <!--单图-->
+   <view class="img-box2 flex-box" wx:if="{{item.ct_type == '1'}}">
+        <view class="box2-left flex-col">
+        
+            <view class="title2 text-ellipsis" bindtap="handleEventTap" data-id="{{item.id}}" data-typeid="1">{{item.title}}</view>
+             
+           <view class="box1-info">
+             <text>{{item.name}}</text> 
+             <text>{{item.create_date}}</text>
+           </view>
+        </view>
+      
+          <image src="{{item.cover_url}}" bindtap="handleEventTap" data-id="{{item.id}}" data-typeid="1"></image>
+       
+    </view>
+
+    <!--多图-->
+     <view class="img-box1 flex-col" wx:elif="{{item.ct_type == '3'}}">    
+          <view class="title1 text-ellipsis" bindtap="handleEventTap" data-id="{{item.id}}" data-typeid="3">{{item.title}}</view>
+          <view class="images-box1 flex-box" bindtap="handleEventTap" data-id="{{item.id}}" data-typeid="3">
+            <image  wx:for="{{item.pics_orgin}}" wx:for-item="i" src="{{i}}" wx:key="id"></image>
+          </view>
+       
+        <view class="box1-info">
+          <text>{{item.name}}</text> 
+          <text>{{item.create_date}}</text>
+        </view>
+    </view>
+
+</template>

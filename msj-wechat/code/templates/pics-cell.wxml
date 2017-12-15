@@ -1,0 +1,15 @@
+<template name="picsCell">
+   <view class="img-box1 flex-col">
+        <navigator url="/pages/news-detail/news-detail">
+          <view class="title1 text-ellipsis">{{item.title}}</view>
+          <view class="images-box1 flex-box">
+            <image  wx:for="{{item.pics_orgin}}" wx:for-item="i" src="{{i}}"></image>
+          </view>
+        </navigator>
+       
+        <view class="box1-info">
+          <text>{{item.name}}</text> 
+          <text>{{item.create_date}}</text>
+        </view>
+    </view>
+</template>

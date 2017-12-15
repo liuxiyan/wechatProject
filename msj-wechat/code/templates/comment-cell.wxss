@@ -1,0 +1,56 @@
+/*精彩评论 开始*/
+.detail-comment{
+  width:100%;
+  margin-top:15rpx;
+  background:#fff;
+  overflow-x:hidden;
+}
+
+.comment-box1{
+  width:750rpx;
+  padding:40rpx 20rpx;
+  border-bottom:1px solid #EFEFEF;
+}
+
+comment-box1:last-child{
+  border-bottom: none;
+}
+
+.comment-box1 image{
+  width: 50rpx;
+  height:50rpx;
+  border-radius:50%;
+}
+
+.comment-right{
+  width:630rpx;
+  height:100%; 
+}
+
+.comment-content{
+  font-size:30rpx;
+  line-height: 48rpx;
+  color:#333;
+}
+
+.comment-right .comment-info{
+  font-size:24rpx;
+  color:#999;
+  line-height:48rpx;
+}
+
+.blank-comment{
+  width:100%;
+  padding:30rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color:#999;
+}
+
+.blank-comment image{
+  width:106rpx;
+  height:163rpx;
+  margin-bottom: 20rpx;
+  margin-left:15rpx;
+}
+/*精彩评论 结束*/

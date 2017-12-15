@@ -1,0 +1,15 @@
+<import src="../../templates/num-cell.wxml" />
+<view class="container">
+  <!--数说新语-->
+  <view class="dot-num">
+    <block wx:for="{{dotNumArray}}" wx:key="id">
+      <template is="numCell" data="{{item}}" />
+    </block>
+
+    <!--底部提示-->
+    <view class="bottom" hidden="{{bottomShow}}">
+      <view class="bottom-line"></view>
+      <view class="bottom-tip">我是有底线的</view>
+    </view>
+  </view>
+</view>

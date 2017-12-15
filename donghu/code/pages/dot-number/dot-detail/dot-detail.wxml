@@ -1,0 +1,97 @@
+<import src="../../../utils/wxParse/wxParse.wxml" />
+<scroll-view scroll-y="true" scroll-top="{{scrollTop.scrollNum}}" bindscroll="scrollTopFun" scroll-with-animation="true">
+  <view class="containt">
+    <view class="header">
+      <view class="header-title">
+        【量数选题】{{detail.title}}
+      </view>
+      <view class="header-des">
+        <view class="header-des-bouns">{{detail.money}}</view>
+        <view class="header-des-time">{{detail.add_time}}</view>
+      </view>
+    </view>
+
+    <!--分割线-->
+    <view class="line"></view>
+
+    <!--导航-->
+    <view class="nav">
+      <view class="nav-des {{current}}" catchtap="changeToDes">
+        任务描述
+      </view>
+      <view class="nav-rule {{noCurrent}}" catchtap="changeToRule">
+        任务规则
+      </view>
+    </view>
+
+    <!--详细正文-->
+    <view class="main {{desShow}}">
+      <image src="{{detail.img_path}}"></image>
+      <template is="wxParse" data="{{wxParseData:detailDesc.nodes}}" />
+    </view>
+
+    <!--任务规则-->
+    <view class="rule {{ruleShow}}">
+      <view class="strong"> 一起来选题：</view>
+      <view> 根据活动内容选出你的最佳选项；</view>
+      <view class="strong">惊喜在等待：</view>
+      <view> 答题结束后获得一次抽奖机会；</view>
+      <view class="strong">人品决定钱品：</view>
+      <view> 随机爆出的红包金额不等。</view>
+      <view class="strong">奖励说明：</view>
+      <view> 截止时间前，成功完成选题后的会员将获得一次抽奖机会，奖金随机，每人一次，抽完为止。</view>
+    </view>
+
+    <!--分割线-->
+    <view class="line"></view>
+
+    <!--任务-->
+    <view class="task">
+      <view class="task-top">已提交({{taskArr.length}})</view>
+      <view class="task-main" wx:for="{{taskArr}}" wx:for-item="task" wx:key="id">
+        <view class="task-detail">
+          <view class="task-detail-left">
+            <view class="icon">
+               <image src="{{task.dhuserHead}}"></image>
+               <view class="sign" style="background-repeat: no-repeat; background-image: url({{task.signUrl}});" hidden="{{task.signShow}}">
+                {{task.sign}}
+               </view>
+            </view>
+            <view class="detail-left-name">{{task.dhuserName}}</view>
+          </view>
+          <view class="task-detail-right">
+            <view class="task-detail-right-con">
+              <view class="detail-right-bar">
+                <view style="width:{{task.progress}}"></view>
+              </view>
+              <view class="step" style="background-color:{{task.bgOne}}%">✔</view>
+              <view class="step" style="background-color:{{task.bgTow}}%">2</view>
+              <view class="step" style="background-color:{{task.bgThree}}%">3</view>
+              <view class="step" style="background-color:{{task.bgFour}}%">4</view>
+              <view class="desc">提交大纲</view>
+              <view class="desc">等待大纲采纳结果</view>
+              <view class="desc">提交终稿</view>
+              <view class="desc">发票寄送及打款</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!--加载更多提示-->
+      <view class="more" hidden="{{moreShow}}">
+        <button size="mini" plain="true" loading="true"></button>
+      </view>
+
+      <!--底部提示-->
+      <view class="bottom" hidden="{{bottomShow}}">
+        <view class="bottom-line"></view>
+        <view class="bottom-tip">我是有底线的</view>
+      </view>
+    </view>
+
+    <!--底部-->
+    <view class="{{detail.bottomStyle}}" catchtap="startTask" hidden="hidden">
+      {{detail.statusText}}
+    </view>
+    <view class="to-top" wx:if="{{scrollTop.goTopShow}}" catchtap="toTop"></view>
+  </view>
+</scroll-view>

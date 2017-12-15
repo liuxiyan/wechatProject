@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/news/news",
+    "pages/news-detail/news-detail"
+    
+  ],
+  "window":{
+    "navigationBarTitleText":"民宿加",
+    "navigationBarBackgroundColor":"#fff",
+    "navigationBarTextStyle":"black",
+    "backgroundTextStyle":"dark",
+    "backgroundColor":"#fff"
+  }
+
+}

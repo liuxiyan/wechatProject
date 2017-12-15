@@ -1,0 +1,88 @@
+@import "../../utils/wxParse/wxParse.wxss";
+@import "../../templates/hot-cell.wxss";
+@import "../../templates/comment-cell.wxss";
+
+.container{
+  background: #eee;
+}
+
+.detail-section{
+  width:100%;
+  padding:0 30rpx;
+  background: #fff;
+  color:#333;  
+}
+
+.detail-section .title2{
+  width:100%;
+  margin: 15rpx 0;
+  max-height:120rpx;
+  line-height: 60rpx;
+  color:#333;
+  -webkit-line-clamp:2;
+  font-size:40rpx;
+  font-weight: bold;
+}
+
+.box1-info{
+  margin: 15rpx 0;
+}
+
+.detail-text,.content-box{
+  width:100%;
+  height: auto;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  margin-bottom: 20rpx;
+}
+
+.content-box image{
+  display: block;
+  width:710rpx;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/*热门推荐 开始*/
+.detail-hot{
+  width:100%;
+  margin-top:15rpx;
+  background: #fff;
+  overflow-x:hidden;
+}
+
+.detail-title{
+  position: relative;
+  width:100%;
+  margin:18rpx 0 18rpx 30rpx;
+  padding-left: 30rpx;
+  font-size:34rpx;
+  color:#98525c;
+  font-weight: bold;
+}
+
+.detail-title::before{
+  content: '';
+  display: block;
+  width:8rpx;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  bottom: 0;
+  background: linear-gradient(top,#D67C89,#98525c);
+  background: -moz-linear-gradient(top,#D67C89,#98525c);
+  background: -webkit-linear-gradient(top,#D67C89,#98525c);
+}
+
+/*热门推荐 结束*/
+
+/*多图内容 开始*/
+.imgs-desc-box{
+  padding: 20rpx 0;
+}
+
+.imgs-tips{
+  margin-top: 20rpx;
+}
+/*多图内容 结束*/

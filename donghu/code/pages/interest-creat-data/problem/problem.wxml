@@ -1,0 +1,32 @@
+<scroll-view class="container" scroll-y="true">
+  <!--标题-->
+  <view class="problem-title">
+    【第{{currentIndex}}题】{{problemItem.title}}
+  </view>
+  <!--选项-->
+  <view class="problem-option">
+      <radio-group bindchange="radioChange" hidden="hidden">
+        <label class="option-detail" wx:for="{{problemArr}}" wx:key="{{item.value}}">
+
+          <view class="option-detail-left">
+            <radio value="{{item.optionId}}" />
+          </view>
+          <view class="option-detail-right">{{item.option}}</view>
+        </label>
+      </radio-group>
+
+      <checkbox-group bindchange="checkboxChange" hidden="hidden">
+        <label class="option-detail" wx:for="{{problemArr}}" wx:key="{{item.value}}">
+          <view class="option-detail-left">
+            <checkbox value="{{item.optionId}}" />
+          </view>
+          <view class="option-detail-right">{{item.option}}</view>
+        </label>
+      </checkbox-group>
+  </view>
+</scroll-view>
+<!--操作-->
+<view class="bottom">
+  <button>下一题</button>
+  <button>上一题</button>
+</view>

@@ -1,0 +1,284 @@
+@import "../../../utils/wxParse/wxParse.wxss";
+
+page{
+    background-color:  #fff;
+    height: 100%;
+}
+
+scroll-view{
+  height: 100%;
+}
+
+/*头部说明*/
+.containt{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    padding: 50rpx 32rpx;
+    background-color: #fff;
+}
+
+.header .header-title{
+    font-size: 24px;
+}
+
+.header .header-des{
+    margin-top: 37rpx;
+    display: flex;
+    font-size: 15px;
+}
+
+.header .header-des .header-des-bouns{
+    height: 28rpx;
+    padding-left: 30rpx;
+    padding-right: 20rpx;
+    background: url(../../../images/￥.png) no-repeat 0 3rpx;
+    background-size: 23rpx 23rpx;
+    color: #fb5a6d;
+    line-height: 28rpx;
+    border-right: 1rpx solid #888;
+}
+
+.header .header-des .header-des-time{
+    padding-left: 30rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    color: #929292;
+}
+
+.containt .line{
+    height: 20rpx;
+    background-color: #efeff4; 
+}
+
+/*导航*/
+.nav{
+  display: flex;
+  height: 100rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-des,.nav-rule{
+  flex: 1;
+  text-align: center;
+  line-height: 100rpx;
+  color: #363636;
+  font-size: 15px;
+}
+
+.nav .current{
+  border-bottom: 6rpx solid #15aafa;
+  color: #6ec3fc;
+}
+
+/*详细正文*/
+.main{
+    display: none;
+    padding: 40rpx 20rpx 70rpx;
+    background-color: #fff;
+}
+
+.main image{
+    width: 100%;
+}
+
+.rule{
+    padding: 40rpx 20rpx 70rpx;
+    background-color: #fff;
+}
+
+.rule view{
+    padding: 0 34rpx;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30rpx;
+    color: #888;
+    line-height: 1.8em;
+}
+
+.rule .strong{
+    font-weight: 700;
+    color: #111;
+}
+
+.block{
+    display: block;
+}
+
+.none{
+    display: none;
+}
+
+/*评论*/
+.comment{
+    width: 100%;
+    background-color: #fff;
+    padding: 0 20rpx;
+    margin-bottom: 90rpx;
+}
+
+.comment .comment-top{
+    height: 110rpx;
+    padding-top: 40rpx;
+    font-size: 28rpx;
+    color: #000;
+}
+
+.comment .comment-detail{
+    display: flex;
+    padding: 37rpx 0;
+    border-bottom: 1rpx solid #eee;
+}
+
+.comment .comment-detail image{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.comment .comment-detail .comment-detail-right{
+    flex: 1;
+    margin-left: 20rpx;
+}
+
+.comment-other{
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #eee;
+}
+
+.comment-other .comment-other-detail{
+    flex: 1;
+    margin-left: 90rpx;
+}
+
+.comment .comment-detail .comment-detail-right .right-name,.comment-other .comment-other-detail .other-name{
+    height: 40rpx;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    color: #353535;
+}
+
+.comment .comment-detail .comment-detail-right .right-time,.comment-other .comment-other-detail .other-time{
+    height: 30rpx;
+    font-size: 20rpx;
+    line-height: 30rpx;
+    color: #888888;
+}
+
+.comment .comment-detail .comment-detail-right .right-content,.comment-other .comment-other-detail .other-content{
+    margin-top: 20rpx;
+    line-height: 42rpx;
+    font-size: 28rpx;
+    color: #353535;
+}
+
+.comment .comment-detail .comment-detail-right .right-follow{
+    display: flex;
+    margin-top: 35rpx;
+    justify-content: flex-end;
+    font-size: 28rpx;
+    color: #353535;
+}
+
+.comment .comment-detail .comment-detail-right .right-follow view{
+    height: 30rpx;
+    padding: 0 35rpx;
+}
+
+.comment .comment-detail .comment-detail-right .right-follow view:first-child{
+    background: url(../../../images/zan.png) no-repeat left;
+    background-size: 28rpx 28rpx;
+}
+
+.comment .comment-detail .comment-detail-right .right-follow view:last-child{
+    background: url(../../../images/commen.png) no-repeat left;
+    background-size: 26rpx 27rpx;
+}
+
+/*底部*/
+.bottom-start{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 89rpx;
+    line-height: 89rpx;
+    background-color: #10aeff;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    box-shadow: 0 -1rpx 1px #0499e5;
+    z-index: 2;
+}
+
+.bottom-end{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 89rpx;
+    line-height: 89rpx;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #d7d7d7;
+    box-shadow: 0 -1rpx 1px #d7d7d7;
+    z-index: 2;
+}
+
+.to-top{
+    position: fixed;
+    right: 0;
+    bottom: 248rpx;
+    width: 70rpx;
+    height: 70rpx;
+    background: url(../../../images/to-top.png) no-repeat center center;
+    background-size: 70rpx 70rpx;
+}
+
+.more{
+    height: 60rpx;
+    text-align: center;
+}
+
+.more button{
+    border: 0;
+}
+
+/*底部*/
+.bottom{
+  height: 130rpx;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 2rpx;
+}
+
+.bottom .bottom-line{
+  position: absolute;
+  height: 2rpx;
+  width: 100%;
+  top: 64rpx;
+  left: 0;
+  background-color: #f4f4f4;
+  z-index: 0;
+}
+
+.bottom .bottom-tip{
+  position: relative;
+  display: inline-block;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  color: #a9a9a9;
+  line-height: 130rpx;
+  background-color: #fff;
+  z-index: 1;
+}

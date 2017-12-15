@@ -1,0 +1,9 @@
+@import "../../templates/pics-cell.wxss";
+@import "../../templates/hot-cell.wxss";
+
+.container{
+  min-height:100vh;
+  padding-top:93rpx;
+  overflow-x:hidden;
+}
+
